@@ -6,8 +6,6 @@ Le projet est divisé en deux parties :
 - **Backend (PHP/MySQL)** — gère les données et l'API.
 - **Frontend (React)** — gère l'interface utilisateur.
 
----
-
 ## Prérequis
 
 Avant d'exécuter le projet, assurez-vous d'avoir :
@@ -18,15 +16,11 @@ Avant d'exécuter le projet, assurez-vous d'avoir :
 - **Node.js + npm** ou **yarn**
 - **Git** (optionnel, mais recommandé)
 
----
-
 ## Fonctionnement général
 
 1. Le **backend PHP** communique avec la **base de données MySQL**.
 2. Le **frontend** interagit avec le backend via des **requêtes HTTP** (`fetch`).
 3. L'utilisateur peut télécharger et ajouter des ressources.
-
----
 
 ## Aperçu du projet
 
@@ -51,8 +45,6 @@ Voici un aperçu visuel de **OpenLibrary** sur différents appareils :
 
 </div>
 
----
-
 ## Installation et exécution
 
 ### 1. Cloner le projet
@@ -61,8 +53,6 @@ Voici un aperçu visuel de **OpenLibrary** sur différents appareils :
 git clone https://github.com/eren-the-coder/uy1_open_library.git
 cd uy1_open_library
 ```
-
----
 
 ### 2. Configuration du backend
 
@@ -134,8 +124,6 @@ Ouvrez [http://localhost/openlibrary](http://localhost/openlibrary) ou directeme
 http://localhost/openlibrary/api/getPosts.php
 ```
 
----
-
 ### 3. Configuration du frontend
 
 Tapez les commandes suivantes pour démarrer le serveur de développement du **frontend React** :
@@ -147,8 +135,6 @@ npm run dev
 ```
 
 Le projet devrait se lancer sur : [http://localhost:3000](http://localhost:3000)
-
----
 
 ## Configuration de l'environnement de production
 
@@ -162,8 +148,6 @@ VITE_API_URL=https://ton-site.com/api
 ```
 
 > Ce fichier est utilisé automatiquement lors du build de production (`npm run build`) pour connecter l'application à l'API distante.
-
----
 
 ## Déploiement sur un hébergeur
 
@@ -221,8 +205,6 @@ VITE_API_URL=https://ton-site.com/api
    https://ton-site.com
    ```
 
----
-
 ## Gestion des fichiers `.env` et `config.php`
 
 ### 1. Fichier `.env.php` (non versionné)
@@ -257,8 +239,6 @@ Ajoute cette ligne dans ton `.gitignore` :
 backend/api/.env.php
 ```
 
----
-
 ### 2. Fichier `config.php`
 
 Charge les données du `.env.php` et initialise la connexion MySQL.
@@ -283,8 +263,6 @@ if ($conn->connect_error) {
 ?>
 ```
 
----
-
 ### 3. Gestion automatique du mode `dev` / `prod`
 
 ```php
@@ -296,8 +274,6 @@ if ($host === '127.0.0.1' || $host === 'localhost') {
 }
 ```
 
----
-
 ## Structure de l'API
 
 Chaque fichier dans `backend/api/` représente une route :
@@ -307,20 +283,14 @@ Chaque fichier dans `backend/api/` représente une route :
 - `getTeachingUnit.php` → renvoie la liste des unités d'enseignement
 - `download.php` → télécharge une ressource
 
----
-
 ## Auteur
 
 **Projet OpenLibrary**  
 Développé par _Eren MM_
 
----
-
 ## Licence
 
 Ce projet est libre sous licence MIT.  
 Vous pouvez l'utiliser, le modifier et le redistribuer librement, à condition de conserver les mentions d'origine.
-
----
 
 _Merci d'utiliser OpenLibrary — un projet conçu pour rendre le savoir accessible à tous !_
